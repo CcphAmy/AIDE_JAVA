@@ -207,7 +207,6 @@ public class httpSchoolNetUnicom{
      * Send postUnicom
      * @param postData
      * @return void
-     * rem postUnicom 修改 全哥的PHP自动登录版本
      */
 
     private static void postUnicom(String userid,String passwd) throws Exception {  
@@ -235,8 +234,8 @@ public class httpSchoolNetUnicom{
         //System.out.println("postParams--->"+postParams);
         //189 电信
         String reTwoPost = HttpPost("http://portal.gd165.com/login.do",postParams);
-/*        byte[] bs = reTwoPost.getBytes("GBK");//utf-8
-        reTwoPost = new String(bs,"UTF-8");*/
+        byte[] bs = reTwoPost.getBytes("GBK");//utf-8
+        reTwoPost = new String(bs,"UTF-8");
         //System.out.println("reTwoPost--->"+reTwoPost);
         if (reTwoPost.indexOf(userid +"@16900.gd")>-1) {
             System.out.println("login--->[True]");
