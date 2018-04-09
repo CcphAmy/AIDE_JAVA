@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="app_name">test</string>
-    <string name="hello">res/strings.xml读取\nhello world!</string>
-
-</resources>
