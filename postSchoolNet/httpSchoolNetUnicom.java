@@ -237,12 +237,13 @@ public class httpSchoolNetUnicom{
         byte[] bs = reTwoPost.getBytes("GBK");//utf-8
         reTwoPost = new String(bs,"UTF-8");
         //System.out.println("reTwoPost--->"+reTwoPost);
-        if (reTwoPost.indexOf(userid +"@16900.gd")>-1) {
-            System.out.println("login--->[True]");
-            System.out.println(reTwoPost);
-            String message =new String(getSubUtilSimple(reTwoPost,"message\" value=\'(.*?)\'"));
+        if (reTwoPost.indexOf("errormessage")>-1) {
+            System.out.println("login--->[return]");
+            //System.out.println(reTwoPost);
+            //errormessage" value="
+            String message =new String(getSubUtilSimple(reTwoPost,"errormessage\" value=\"(.*?)\""));
             System.out.println("message--->["+message+"]");
-        }else{System.out.println("login--->[False]");System.out.println(reTwoPost);}
+        }else{System.out.println("login--->[False]");}
         // System.out.println("getHostAddress--->" +reTwoGet);
     }  
 
